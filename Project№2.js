@@ -1,18 +1,19 @@
-var a = 1
-var b = 2
-var summ = 2
-for (let x = 0 ; x < 4000000 ; x = a + b){
-    if (a > b){
-        b = a + b
-        if (b % 2 == 0){
-            summ += b
-        }
-    }
-    if (a < b){
-        a = a + b
-        if (a % 2 == 0){
-            summ += a
-        }
-    }
+var fib=[1,2];
+
+function sumEvenFib(max){
+while(fib[fib.length-1]<max){
+ var next= fib[fib.length-1]+ fib[fib.length-2];
+ fib.push(next);
 }
-console.log(summ)
+
+var evenFib= fib.filter(function(number){
+return number%2===0;
+});
+
+var sum= evenFib.reduce(function(a,b){
+    return a+b;   
+});
+console.log(sum);
+}
+
+sumEvenFib(4000000)
