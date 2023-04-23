@@ -7,3 +7,4 @@ console.log(a)
 }
 let b;
 let le;
+let c;
