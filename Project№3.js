@@ -1,10 +1,8 @@
-let x=0;
-while(x<10){
-let a;
-a=x+1
-x++
-console.log(a)
+let a= 100;
+let x= 0;
+let list= []
+for(x;x<=a;x++){
+list.push(x);
 }
-let b;
-let le;
-let c;
+console.log(list)
+
